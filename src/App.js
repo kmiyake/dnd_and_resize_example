@@ -25,6 +25,14 @@ class App extends Component {
             maxHeight={2304}
             grid={[0, 24]}
             style={{ border: '1px solid #000', }}
+            onResizeStop={(e, direction, refToElement, delta) => {
+              if (delta.height === 0) {
+                return;
+              }
+
+              const minutes = delta.height / 24 * 15
+              console.log(`${minutes} minutes`);
+            }}
           >
             Sample with default size
           </Resizable>
