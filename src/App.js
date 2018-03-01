@@ -17,8 +17,11 @@ class App extends Component {
         <Resizable
           defaultSize={{
             width:320,
-            height:200,
+            height:24,
           }}
+          minHeight={24}
+          maxHeight={2304}
+          grid={[0, 24]}
           style={{ border: '1px solid #000', }}
         >
           Sample with default size
