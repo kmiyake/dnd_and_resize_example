@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Resizable from 're-resizable';
 import logo from './logo.svg';
 import './App.css';
 
@@ -13,6 +14,15 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Resizable
+          defaultSize={{
+            width:320,
+            height:200,
+          }}
+          style={{ border: '1px solid #000', }}
+        >
+          Sample with default size
+        </Resizable>
       </div>
     );
   }
