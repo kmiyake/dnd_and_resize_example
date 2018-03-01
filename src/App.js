@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Resizable from 're-resizable';
 import logo from './logo.svg';
 import './App.css';
+import Container from "./Container.js";
 
 class App extends Component {
   render() {
@@ -14,18 +15,21 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Resizable
-          defaultSize={{
-            width:320,
-            height:24,
-          }}
-          minHeight={24}
-          maxHeight={2304}
-          grid={[0, 24]}
-          style={{ border: '1px solid #000', }}
-        >
-          Sample with default size
-        </Resizable>
+        <div style={{ display: 'flex', }}>
+          <Resizable
+            defaultSize={{
+              width:320,
+              height:24,
+            }}
+            minHeight={24}
+            maxHeight={2304}
+            grid={[0, 24]}
+            style={{ border: '1px solid #000', }}
+          >
+            Sample with default size
+          </Resizable>
+          <Container />
+        </div>
       </div>
     );
   }
